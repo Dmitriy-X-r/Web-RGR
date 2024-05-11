@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валидатор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Валидация</h1>
+
+        <form action="" class="form" id="add-form">
+            <div class="input-box">
+                <input type="text" data-required="true" data-min-length="2" data-max-length="20" placeholder="Имя"
+                    class="input-field">
+            </div>
+            <div class="input-box">
+                <input type="text" data-required="true" data-min-length="2" data-max-length="20" placeholder="Фамилия"
+                    class="input-field">
+            </div>
+            <div class="input-box">
+                <input type="text" data-min-length="2" data-max-length="20" placeholder="Отчество" class="input-field">
+            </div>
+
+            <button type="submit" class="send-btn">Отправить</button>
+        </form>
+    </div>
+
+    <script defer src="script.js"></script>
+</body>
+
+</html>

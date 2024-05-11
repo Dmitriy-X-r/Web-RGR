@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form {
+    display: block;
+    width: 500px;
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    border: 1px solid blue;
+    padding: 20px 28px;
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.send-btn {
+    border: none;
+    padding: 20px 28px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.send-btn:hover {
+    background-color: rgb(55, 55, 255);
+}
+
+.send-btn:active {
+    background-color: rgb(31, 31, 190);
+}
+
+.error .input-field {
+    border-color: red;
+}
+
+.error-label {
+    display: block;
+    color: red;
+    margin: 0 0 10px;
+}
