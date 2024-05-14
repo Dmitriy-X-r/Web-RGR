@@ -58,9 +58,57 @@ function validation(form) {
     return result;
 }
 
-document.getElementById('add-form').addEventListener('submit', function (event) {
+document.getElementById('form').addEventListener('submit', function (event) {
     event.preventDefault();
     if (validation(this) === true) {
         alert('Форма проверена успешно!');
     }
 })
+
+// Регулярка для текстовых инпутов
+
+const textRegex = /[A-Za-z0-9!"№;^&@#$%^&*()-+=_~.,<>?`]/g;
+let inputsText = document.querySelectorAll('.input-text');
+
+for (const input of inputsText) {
+    input.oninput = function () {
+        this.value = this.value.replace(textRegex, '');
+    }
+}
+
+
+// function validateEmail(form, email) {
+//     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+//     var address = document.forms[form].elements[email].value;
+//     if (reg.test(address) == false) {
+//         alert('Введите корректный e-mail');
+//         return false;
+//     }
+// }
+
+// const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+// let inputEmail = document.querySelectorAll('.input-email');
+// inputEmail.oninput = function () {
+//     this.value = this.value.replace(emailRegex, '');
+// }
+
+
+// Для номера телефона
+
+$('.input-phone').mask('+7 (999) 999-99-99');
+
+$.fn.setCursorPosition = function (pos) {
+    if ($(this).get(0).setSelectionRange) {
+        $(this).get(0).setSelectionRange(pos, pos);
+    } else if ($(this).get(0).createTextRange) {
+        var range = $(this).get(0).createTextRange();
+        range.collapse(true);
+        range.moveEnd('character', pos);
+        range.moveStart('character', pos);
+        range.select();
+    }
+};
+
+$('input[type="tel"]').click(function () {
+    $(this).setCursorPosition(4);  // set position number
+});
