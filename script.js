@@ -27,6 +27,7 @@ function validation(form) {
 
     const allInputs = form.querySelectorAll('input');
 
+
     for (const input of allInputs) {
         removeError(input)
 
@@ -75,24 +76,6 @@ for (const input of inputsText) {
         this.value = this.value.replace(textRegex, '');
     }
 }
-
-
-// function validateEmail(form, email) {
-//     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-//     var address = document.forms[form].elements[email].value;
-//     if (reg.test(address) == false) {
-//         alert('Введите корректный e-mail');
-//         return false;
-//     }
-// }
-
-// const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
-// let inputEmail = document.querySelectorAll('.input-email');
-// inputEmail.oninput = function () {
-//     this.value = this.value.replace(emailRegex, '');
-// }
-
-
 // Для номера телефона
 
 $('.input-phone').mask('+7 (999) 999-99-99');

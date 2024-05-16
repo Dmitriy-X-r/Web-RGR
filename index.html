@@ -30,13 +30,15 @@
                     placeholder="+7 (999) 999-99-99">
             </div>
             <div class="input-box">
-                <input type="email" id="email" data-required="true" placeholder="почта" class="input-field input-email">
+                <input type="email" id="email" data-required="true" placeholder="почта" class="input-field input-email"
+                    pattern="^\S+@\S+\.\S+$" title="user@example.com" oninvalid="this.style.borderColor = 'red'"
+                    onchange="this.style.borderColor = 'green'">
             </div>
-            <div class="input-box">
+            <div class=" input-box">
                 <input type="date" data-required="true" class="input-field">
             </div>
             <div class="input-box">
-                <input type="password" data-required="true" data-min-length="6" data-max-length="80"
+                <input type="password" data-required="true" data-min-length="6" data-max-length="40"
                     placeholder="пароль" class="input-field">
             </div>
 
